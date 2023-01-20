@@ -218,4 +218,4 @@ Lets log into Client-1 with one of the users that were created (in our instance 
 
 
 
-🎉Congratulations! You have implementated on-premises Active Directory and created users within Azure Virtual Machines!🎉
+🎉Congratulations! You have implementated Active Directory and created users with Azure Virtual Machines!🎉
