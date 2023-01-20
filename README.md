@@ -25,11 +25,9 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 <h3>Step 1: Setup Resources in Azure</h3>
 
 - Create two virtual machines
-  - If you need help creating your virtual machines, please see my tutorial [here](https://github.com/miquelmanaois/virtualmachine)
   - 1st virtual machine will be the Domain Controller
   - Name: DC-1
   - Image: Windows Server 2022
-  - Take note of the Virtual Network (Vnet) that gets created at this time
        
 <p align="center">
 <img src="https://i.imgur.com/mrpBWtM.png" height="70%" width="70%" alt="Azure Free Account"/>
@@ -66,9 +64,9 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 <p align="center">
 <img src="https://i.imgur.com/U6UOqj5.png" height="70%" width="70%" alt="Azure Free Account"/> 
 	
-- Login to DC-1 using Microsoft Remote Desktop
+- Login to DC-1 using Remote Desktop
 - Start -> Windows Administrative Tools -> Windows Defender Firewall with Advanced Security 
--Inbound rules.
+- Inbound rules.
 - Sort the list by protocols 
 - Find Core Networking Diagnostics ICMPv4 and enable these two inbound rules.
 
@@ -87,7 +85,7 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 - Log back ito DC-1 
 - Open Server Manager
 - Select "Add roles and features." Follow the prompts.
-- At Server Roles, check "Active Directory Domain Services." (Ignore how the picture below already says "Installed") Then select next Add Features. Select next and finish installing.
+- At Server Roles, check "Active Directory Domain Services." Then select next, Add Features. Select next and finish installing.
 
 <p align="center">
 <img src="https://i.imgur.com/DQRVNnm.png" height="80%" width="80%" alt="Azure Free Account"/> <img src="https://i.imgur.com/RpzngRi.png" height="50%" width="50%" alt="Azure Free Services"/>
@@ -100,9 +98,9 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 <img src="https://i.imgur.com/GOYiTFe.png" height="70%" width="70%" alt="Azure Free Account"/> 
 	
  - Select Add a new forest
-          - Root domain name: mydomain.com
+ - Root domain name: mydomain.com
  - Select next
-          - Create password
+ - Create password
  - Select next, follow the prompts and finish up by selecting install. 
 
 
@@ -117,7 +115,7 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 	
 
 
-<h3>Step 4: Create an Admin and Normal User Account in Active Directory v1.15.8</h3>
+<h3>Step 4: Create an Admin and User Account in Active Directory v1.15.8</h3>
      
 - On DC-1, open up Server Manager
 - Click tools at the top right hand side
