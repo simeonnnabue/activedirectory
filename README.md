@@ -25,9 +25,9 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 <h3>Step 1: Setup Resources in Azure</h3>
 
 - Create two virtual machines
-  - 1st virtual machine will be the Domain Controller
-  - Name: DC-1
-  - Image: Windows Server 2022
+- 1st virtual machine will be the Domain Controller
+- Name: DC-1
+- Image: Windows Server 2022
        
 <p align="center">
 <img src="https://i.imgur.com/mrpBWtM.png" height="70%" width="70%" alt="Azure Free Account"/>
@@ -35,9 +35,9 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 
 
  - Set DC-1's virtual Network Interface Card (NIC) Private IP address to be static
-     - Go to DC-1's network settings -> select networking -> select the link next to network interface 
-     - IP Configurations -> ipconfig1 
-     - Assignment from dynamic to static (this ensures DC-1's IP address will not change)
+ - Go to DC-1's network settings -> select networking -> select the link next to network interface 
+ - IP Configurations -> ipconfig1 
+ - Assignment from dynamic to static (this ensures DC-1's IP address will not change)
 	   
 <p align="center">
 <img src="https://i.imgur.com/xcyLUOG.png" height="70%" width="70%" alt="Azure Free Account"/> <img src="https://i.imgur.com/ZaWdzTl.png" height="70%" width="70%" alt="Azure Free Services"/>  <img src="https://i.imgur.com/Vn0UhWm.png" height="70%" width="70%" alt="Azure Free Services"/>
@@ -45,9 +45,9 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 
 
 - 2nd virtual machine will be the Client
-     - Name: Client-1
-     - Image: Windows 10 Pro
-     - Use the same resource group and Vnet as DC-1
+- Name: Client-1
+- Image: Windows 10 Pro
+- Use the same resource group and Vnet from DC-1
 
 <p align="center">
 <img src="https://i.imgur.com/Vf7yeY1.png" height="70%" width="70%" alt="Azure Free Account"/> <img src="https://i.imgur.com/3DK41Cr.png" height="70%" width="70%" alt="Azure Free Services"/> 
@@ -56,10 +56,10 @@ This tutorial outlines the implementation of on-premises Active Directory.<br />
 <h3>Step 2: Ensure Connectivity between client and Domain Controller</h3>
 
 - Login to Client-1 using Microsoft Remote Desktop
-  - Search for command line and open it
-  - ping DC-1's private IP Address (in our instance, 10.1.0.4)
-  - ping - t 10.1.0.4
-  - Due to the firewall, the request is timing out. To fix this, we need to enable ICMPv4 on DC-1's local Windows firewall. 
+- Search for command line and open it
+- ping DC-1's private IP Address (in our instance, 10.1.0.4)
+- ping - t 10.1.0.4
+- Due to the firewall, the request is timing out. To fix this, we need to enable ICMPv4 on DC-1's local Windows firewall. 
 
 <p align="center">
 <img src="https://i.imgur.com/U6UOqj5.png" height="70%" width="70%" alt="Azure Free Account"/> 
